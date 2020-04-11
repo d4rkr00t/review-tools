@@ -1,0 +1,22 @@
+{
+  "name": "review-tools",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "review": "./cli/cli.js"
+  },
+  "scripts": {
+    "build": "opaline build",
+    "dev": "opaline dev"
+  },
+  "keywords": [],
+  "author": "Stanislav Sysoev <@d4rkr00t>",
+  "license": "MIT",
+  "dependencies": {
+    "@opaline/core": "0.0.2",
+    "chalk": "^4.0.0",
+    "get-changed-files": "0.0.1",
+    "ora": "^4.0.3"
+  }
+}
