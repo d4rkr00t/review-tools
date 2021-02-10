@@ -26,7 +26,9 @@ export default async function chooseReviewers(
 ) {
   let spinner = ora(`Getting changed files since "${branch}"`).start();
   let username = await getActiveUserName();
-  let ignoreList = [username].concat(ignore.split(","));
+  let ignoreList = [username]
+      .concat(ignore.split(","))
+      .filter(ignored => !!ignored);
   let changedFiles = await getChangedFiles({
     mainBranch: branch,
     customGetDiffPoint: undefined,
